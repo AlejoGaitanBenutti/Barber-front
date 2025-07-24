@@ -1,0 +1,285 @@
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 60px 20px 40px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
+
+
+.containerTop{
+  
+  text-align: start;
+  max-width: 1500px;
+  width: 1500px;
+  display: flex;
+
+  justify-content: start;
+}
+/* Logo + texto descriptivo */
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+ 
+  
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+}
+
+.description {
+  max-width: 600px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ccc;
+}
+
+/* Redes sociales */
+.social {
+  display: flex;
+  justify-content: center;
+  
+  max-width: 1500px;
+  flex-wrap: wrap;
+  gap:90px;
+  margin-bottom: 40px;
+  
+ 
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  background-color: #FACC15;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Newsletter + enlaces */
+.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+  margin-bottom: 40px;
+  
+  width: 60%;
+
+}
+
+.newsletter{
+  text-align: start;
+
+  width: 50%;
+
+  
+
+}
+
+.newsletter h4,
+.links h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.newsletter input {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  min-width: 250px;
+  flex-grow: 1;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #ddd;
+}
+
+
+.links{
+  
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+ 
+}
+
+.links h4{
+  text-align: start;
+  padding-left: 40px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 5;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  
+  margin-top: 20px;
+}
+
+.links li {
+  margin: 8px 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #FACC15;
+}
+
+/* Parte inferior */
+.bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.bottom a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.bottom a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .containerTop {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top {
+    align-items: center;
+    text-align: center;
+  }
+
+  .description {
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social a {
+    width: 140px;
+    max-width: 200px;
+  }
+
+  .middle {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    padding: 0 20px;
+    
+
+  
+  }
+
+
+
+
+  .newsletter,
+  .links {
+    width: 100%;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+
+  .links {
+    align-items: center;
+ 
+  }
+
+  .links h4 {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .links ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  
+    
+    padding: 0px;
+  }
+
+  
+  .bottom {
+    padding: 20px 15px;
+    font-size: 0.8rem;
+  }
+
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

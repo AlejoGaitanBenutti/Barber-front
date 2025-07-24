@@ -1,0 +1,113 @@
+.theTeamSection {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  background: radial-gradient(circle at center, #161616 0%, #0a0a0a 100%);
+}
+
+.teamContent {
+  margin-bottom: 40px;
+}
+
+.teamTitle {
+  font-size: 3.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.teamDescription {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* 🔥 NUEVO: contenedor en grilla */
+.teamGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.memberCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.teamMemberImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  display: block;
+}
+
+.memberCard:hover .teamMemberImg {
+  filter: grayscale(0%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.493);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  transition: bottom 0.4s ease;
+}
+
+
+
+
+.memberCard:hover .overlay {
+  bottom: 0%;
+  background: linear-gradient(to mid, rgb(0, 0, 0), transparent 100%);
+}
+
+.memberName {
+  font-weight: bold;
+  
+  font-size: 1.3rem;
+
+}
+
+.expecialist{
+padding-bottom: 4px;
+font-size: 1.1rem;
+font-weight: 500;
+}
+
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #ccc;
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+  .teamMemberImg {
+    height: 300px; /* o ajustá según lo que te guste */
+    object-fit: cover;
+   object-position: 50% 20%;
+  }
+}

@@ -1,0 +1,61 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #010101;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 75px;
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.158);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.logo img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #FACC15;
+}
+
+.phone button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.phone button:hover {
+  background-color: #FACC15;
+  color: #0A0A0A;
+  border-color: #FACC15;
+}
