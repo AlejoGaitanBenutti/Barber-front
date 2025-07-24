@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './theTeam.module.css';
+import styles from './TheTeam.module.css';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const teamMembers = [
