@@ -1,3 +1,4 @@
+/* 🧭 NAVBAR PRINCIPAL */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,6 +12,7 @@
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.158);
 }
 
+/* 🔰 LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -26,6 +28,7 @@
   object-fit: contain;
 }
 
+/* 🔗 LINKS DESKTOP */
 .links {
   display: flex;
   list-style: none;
@@ -44,6 +47,7 @@
   color: #FACC15;
 }
 
+/* ☎️ BOTÓN TELÉFONO */
 .phone button {
   background: transparent;
   border: 1px solid white;
@@ -58,4 +62,87 @@
   background-color: #FACC15;
   color: #0A0A0A;
   border-color: #FACC15;
+}
+
+/* 🍔 BOTÓN HAMBURGUESA */
+.menuToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+/* 📱 MENÚ MOBILE */
+.menuMobile {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  background-color: #010101;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  z-index: 99;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.menuMobile a {
+  position: relative;
+  color: white;
+  text-decoration: none!important;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.menuMobile a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #FACC15;
+  transition: width 0.3s ease-in-out;
+}
+
+.menuMobile a:hover {
+  color: #FACC15;
+}
+
+.menuMobile a:hover::after {
+  width: 100%;
+}
+
+/* 🎞️ ANIMACIÓN ENTRADA */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .phone button {
+    display: none;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
 }
