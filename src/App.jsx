@@ -1,30 +1,31 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import Navbar from './components/NavBar';
+import Footer from './components/Footer';
+import Home from './pages/Home/Home'; // NUEVO: agrupás toda la landing en un solo componente
+import Shop from './pages/Shop/Shop';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import './App.css'
-import Hero from './pages/Hero/Hero'
-import Navbar from './components/NavBar'
-import InfoPanel from './components/InfoPanel'
-import Experience from './components/Experience'
-import WhyChooseUs from './components/WhyChooseUs'
-import Services from './components/Services'
-import TheTeam from './components/TheTeam'
-import Footer from './components/Footer'
 
 function App() {
- 
 
+  useEffect(() => {
+  AOS.init({
+    duration: 800, // duración por defecto de las animaciones
+    once: true,    // animar solo una vez
+  });
+}, []);
   return (
-    <>
-    <Navbar/>
-    <Hero/>
-    <InfoPanel/>
-    <Experience/>
-    <WhyChooseUs/>
-    <Services/>
-    <TheTeam/>
-    <Footer/>
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

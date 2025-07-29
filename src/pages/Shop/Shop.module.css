@@ -1,0 +1,35 @@
+.heroShop {
+  background-image: url("/Imagenes/shopBanner.webp");
+  min-height: 540px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+    filter: grayscale(100%);
+
+}
+
+
+.heroShopTitle{
+    font-size: 4.5rem
+}
+
+
+.containerShop {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+
+}
+
+
+.containerCard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 80px;
+  max-width: 1400px;
+  width: 100%;
+}

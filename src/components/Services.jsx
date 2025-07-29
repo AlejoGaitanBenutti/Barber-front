@@ -26,7 +26,7 @@ const rightServices = [
 ];
 const Services = () => {
   return (
-    <section className={styles.services}>
+    <section className={styles.services} id='services'>
       <h2>EXPLORA NUESTROS SERVICIOS</h2>
       <p>
         Experimente la sofisticación, donde la pasión por la barbería se fusiona con la elegancia moderna. Descubra servicios premium y experiencias personalizadas para una apariencia impecable.

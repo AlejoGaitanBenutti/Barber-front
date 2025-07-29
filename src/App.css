@@ -1,8 +1,12 @@
 html, body {
   overflow-x: hidden;
+scroll-behavior: smooth;
 }
 
-body {
+
+
+
+body  {
   font-family: 'Manrope', sans-serif;
   background-color: #010101;
   color: #FFFFFF;

@@ -4,7 +4,7 @@ import styles from './Experience.module.css';
 
 function Experience() {
   return (
-    <section className={styles.experience}>
+    <section className={styles.experience} id='experience'>
       <div className={styles.imageBox}>
         <img src="/Imagenes/experience.avif" alt="Local interior" />
       </div>

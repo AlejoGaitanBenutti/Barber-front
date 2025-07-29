@@ -12,14 +12,14 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <img src="/Imagenes/logo.png" alt="Logo barbería" />
+        <a href="#/"><img src="/Imagenes/logo.png" alt="Logo barbería" /></a>
       </div>
       <ul className={styles.links}>
-        <li><a href="#about">NOSOTROS</a></li>
+        <li><a href="#experience">NOSOTROS</a></li>
         <li><a href="#services">SERVICIOS</a></li>
-        <li><a href="#products">PRODUCTOS</a></li>
+        <li><a href="/shop">PRODUCTOS</a></li>
         <li><a href="#pricing">PRECIOS</a></li>
-        <li><a href="#blog">BLOG</a></li>
+        <li><a href="#equipo">EQUIPO</a></li>
         <li><a href="#gallery">GALERIA</a></li>
         <li><a href="#contact">CONTACTO</a></li>
       </ul>
@@ -29,11 +29,11 @@ function Navbar() {
 
        {isMenuOpen && (
          <div className={styles.menuMobile}>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>NOSOTROS</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>SERVICIOS</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>PRODUCTOS</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>PRECIOS</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>BLOG</a>
+          <a href="#experience" onClick={() => setIsMenuOpen(false)}>NOSOTROS</a>
+          <a href="#services" onClick={() => setIsMenuOpen(false)}>SERVICIOS</a>
+          <a href="/shop" onClick={() => setIsMenuOpen(false)}>PRODUCTOS</a>
+          <a href="#precios" onClick={() => setIsMenuOpen(false)}>PRECIOS</a>
+          <a href="#equipo" onClick={() => setIsMenuOpen(false)}>EQUIPO</a>
           <a href="#" onClick={() => setIsMenuOpen(false)}>GALERIA</a>
           <a href="#" onClick={() => setIsMenuOpen(false)}>CONTACTO</a>
         </div>

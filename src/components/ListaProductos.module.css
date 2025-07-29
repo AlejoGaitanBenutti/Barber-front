@@ -1,0 +1,152 @@
+.productos {
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+
+.container{
+   
+    max-width: 1500px;
+    text-align: start;
+}
+
+
+.containerTitles{
+    display: flex;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.containerTitles div button {
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    color: White;
+    border: 2px solid #ffffff;
+    will-change: auto;
+    background-color: transparent;
+    width:250px ;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 45px; 
+}
+
+
+.containerTitles div button:hover{
+    background-color: #FFFFFF;
+    color: black;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+
+.titulo {
+  font-size: 3.75rem;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+text-transform: uppercase;
+}
+
+.subtitulo{
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 315px;
+  text-align: left;
+  height: 560px;
+  background-color: transparent;
+  cursor: pointer;
+  
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition: 1.2s ease;
+  
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.imagen {
+  width: 100%;
+  height: 315px;
+  object-fit: contain;
+  border-radius: 1px;
+  background-color: #fff;
+}
+
+.nombre {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.descripcion {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-weight: 600;
+}
+
+.precio {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.boton {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.boton a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+}
+
+.boton:hover {
+  background-color: white;
+}
+
+.boton:hover a {
+  color: black;
+}
+
+

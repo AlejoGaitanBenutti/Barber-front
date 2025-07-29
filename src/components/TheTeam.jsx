@@ -11,7 +11,7 @@ const teamMembers = [
 
 const TheTeam = () => {
   return (
-    <section className={styles.theTeamSection}>
+    <section className={styles.theTeamSection} id='equipo'>
       <div className={styles.teamContent}>
         <h2 className={styles.teamTitle}>NUESTRO EQUIPO</h2>
         <p className={styles.teamDescription}>
