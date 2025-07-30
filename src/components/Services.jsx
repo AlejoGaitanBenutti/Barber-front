@@ -27,13 +27,28 @@ const rightServices = [
 const Services = () => {
   return (
     <section className={styles.services} id='services'>
-      <h2>EXPLORA NUESTROS SERVICIOS</h2>
-      <p>
+      <h2
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+        EXPLORA NUESTROS SERVICIOS
+      </h2>
+
+      <p
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="800"
+      >
         Experimente la sofisticación, donde la pasión por la barbería se fusiona con la elegancia moderna. Descubra servicios premium y experiencias personalizadas para una apariencia impecable.
       </p>
 
       <div className={styles.grid}>
-        <ul className={styles.column}>
+        <ul
+          className={styles.column}
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           {leftServices.map((service, i) => (
             <li key={i}>
               <span>{service.name}</span>
@@ -42,7 +57,12 @@ const Services = () => {
           ))}
         </ul>
 
-        <ul className={styles.column}>
+        <ul
+          className={styles.column}
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           {rightServices.map((service, i) => (
             <li key={i}>
               <span>{service.name}</span>
@@ -52,7 +72,14 @@ const Services = () => {
         </ul>
       </div>
 
-      <button className={styles.cta}>EXPLORA NUESTROS SERVICIOS</button>
+      <button
+        className={styles.cta}
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        data-aos-duration="700"
+      >
+        EXPLORA NUESTROS SERVICIOS
+      </button>
     </section>
   );
 };

@@ -3,11 +3,26 @@ import React from 'react';
 import styles from './NavBar.module.css';
 import { useState } from 'react';
 import { HiOutlineX, HiOutlineMenu } from 'react-icons/hi';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Navbar() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+    const handleAnchorClick = (anchor) => {
+    if (location.pathname !== '/') {
+      // Cambia de ruta y pasa el anchor como estado
+      navigate('/', { state: { scrollTo: anchor } });
+    } else {
+      // Ya está en home, hace scroll directo
+      const section = document.querySelector(anchor);
+      if (section) section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -15,13 +30,13 @@ function Navbar() {
         <a href="#/"><img src="/Imagenes/logo.png" alt="Logo barbería" /></a>
       </div>
       <ul className={styles.links}>
-        <li><a href="#experience">NOSOTROS</a></li>
-        <li><a href="#services">SERVICIOS</a></li>
-        <li><a href="/shop">PRODUCTOS</a></li>
-        <li><a href="#pricing">PRECIOS</a></li>
-        <li><a href="#equipo">EQUIPO</a></li>
-        <li><a href="#gallery">GALERIA</a></li>
-        <li><a href="#contact">CONTACTO</a></li>
+        <li><button onClick={() => handleAnchorClick('#experience')}>NOSOTROS</button></li>
+        <li><button onClick={() => handleAnchorClick('#services')}>SERVICIOS</button></li>
+       <li><button onClick={() => { navigate('/shop'); setIsMenuOpen(false); }}>PRODUCTOS</button></li>
+        <li><button onClick={() => handleAnchorClick('#pricing')}>PRECIOS</button></li>
+        <li><button onClick={() => handleAnchorClick('#equipo')}>EQUIPO</button></li>
+        <li><button onClick={() => handleAnchorClick('#gallery')}>GALERIA</button></li>
+        <li><button onClick={() => handleAnchorClick('#contact')}>CONTACTO</button></li>
       </ul>
       <div className={styles.phone}>
         <button>543 (613) 2888</button>
@@ -29,13 +44,13 @@ function Navbar() {
 
        {isMenuOpen && (
          <div className={styles.menuMobile}>
-          <a href="#experience" onClick={() => setIsMenuOpen(false)}>NOSOTROS</a>
-          <a href="#services" onClick={() => setIsMenuOpen(false)}>SERVICIOS</a>
-          <a href="/shop" onClick={() => setIsMenuOpen(false)}>PRODUCTOS</a>
-          <a href="#precios" onClick={() => setIsMenuOpen(false)}>PRECIOS</a>
-          <a href="#equipo" onClick={() => setIsMenuOpen(false)}>EQUIPO</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>GALERIA</a>
-          <a href="#" onClick={() => setIsMenuOpen(false)}>CONTACTO</a>
+          <button onClick={() => handleAnchorClick('#experience')}>NOSOTROS</button>
+          <button onClick={() => handleAnchorClick('#services')}>SERVICIOS</button>
+          <button onClick={() => { navigate('/shop'); setIsMenuOpen(false); }}>PRODUCTOS</button>
+          <button onClick={() => handleAnchorClick('#pricing')}>PRECIOS</button>
+          <button onClick={() => handleAnchorClick('#equipo')}>EQUIPO</button>
+          <button onClick={() => handleAnchorClick('#gallery')}>GALERIA</button>
+          <button onClick={() => handleAnchorClick('#contact')}>CONTACTO</button>
         </div>
       )}
         <button className={styles.menuToggle} onClick={() => setIsMenuOpen(!isMenuOpen)}> 
