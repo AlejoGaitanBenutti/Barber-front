@@ -1,0 +1,150 @@
+.contactSection {
+  background-color: black;
+  color: white;
+  padding: 60px 20px;
+  border-bottom: 1.5px solid #ffffff;
+  min-height: 650px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: nowrap; /* Ambos paneles en una sola fila */
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: stretch; /* Fuerza misma altura */
+  height: 100%;
+}
+
+.contactInfo {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactInfo h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  
+}
+
+.contactInfo p {
+  margin: 8px 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contactInfo ul {
+  list-style: disc;
+  padding-left: 26px;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+
+.contactInfo ul li {
+  padding-bottom: 0.7rem;
+}
+
+.map {
+  margin-top: 20px;
+}
+
+.contactForm {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  border-left: 1px solid #facc15;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-top: 0px; /* ✅ esto alinea el formulario con el título "CONTÁCTENOS" */
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Para alinear el botón abajo */
+  padding-left: 25px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  margin-bottom: 0px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin-top: 45px;
+}
+
+.contactForm textarea {
+  resize: none;
+  height: 300px;
+}
+
+.contactForm button {
+  margin-top: auto;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #facc15;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: #e0b300;
+}
+
+
+@media (max-width: 900px) {
+   .contactContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contactInfo,
+  .contactForm {
+    max-width: 100%;
+    border-left: none;
+    padding: 0;
+  }
+
+    .contactForm {
+    padding-top: 0; /* ❗️En móvil no hace falta el espacio arriba */
+    border-left: none;
+    border-top: 1px solid #facc15;
+    padding-top: 30px;
+  }
+
+  .contactForm form {
+    padding-left: 0;
+  }
+
+  .contactInfo h2 {
+    font-size: 2.2rem;
+  }
+
+  .contactInfo ul {
+    font-size: 1rem;
+    padding-left: 18px;
+  }
+
+  .contactForm textarea {
+    height: 200px;
+  }
+
+  .contactForm button {
+    width: 100%;
+  }
+}

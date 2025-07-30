@@ -35,18 +35,19 @@ function Hero() {
             data-aos-delay="400"
             data-aos-duration="1000"
           >
-            <a
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-                fontWeight: '600',
-              }}
-              href="https://wa.me/5436132888"
-              target="_blank"
-              rel="noopener noreferrer"
+           <a
+            style={{
+              color: 'black',
+              textDecoration: 'none',
+              fontWeight: '600',
+            }}
+            href="https://wa.me/543436132888?text=Hola%2C%20quisiera%20reservar%20un%20turno%20en%20la%20barber%C3%ADa.%20%C2%BFPodr%C3%ADan%20ayudarme%3F"
+            target="_blank"
+            rel="noopener noreferrer"
             >
-              Reservar turno
-            </a>
+            Reservar turno
+          </a>
+
           </button>
         </div>
       </section>
