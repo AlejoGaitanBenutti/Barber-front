@@ -1,16 +1,19 @@
 /* 🧭 NAVBAR PRINCIPAL */
 .navbar {
+  position: fixed; /* en vez de sticky */
+  top: 0;
+  left: 0;
+  width: 100%; /* aseguramos que se extienda */
+  z-index: 1000; /* mayor que el menú mobile */
+  background-color: #010101;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #010101;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  height: 75px;
+  padding: 0.5rem 0rem;
+  height: 65px; /* un poco más chico si querés evitar scroll brusco */
   border-bottom: 0.1px solid rgba(255, 255, 255, 0.158);
 }
+
 
 /* 🔰 LOGO */
 .logo {
@@ -24,7 +27,7 @@
 
 .logo img {
   height: 100px;
-  width: 100px;
+  width: auto;
   object-fit: contain;
 }
 
@@ -42,15 +45,17 @@
 }
 
 
-.links  button {
-  color: white;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+.links button {
+  color: rgba(255, 255, 255, 0.85); /* más suave que blanco puro */
+  font-family: 'Manrope', sans-serif; /* o una fuente más estilizada */
+  font-size: 0.90rem; /* más chica */
+  font-weight: 600; /* no muy gruesa */
+  letter-spacing: 1.6px; /* más espaciado */
+  text-transform: uppercase; /* todo en mayúsculas */
   background-color: transparent;
   border: none;
-  
+  transition: color 0.2s ease;
+  padding: 0.2rem 0.4rem;
 }
 
 .links button:hover {
@@ -59,6 +64,10 @@
   text-decoration-thickness:1.5px;  
   text-underline-offset: 6px;
   cursor: pointer;      
+}
+
+.phone{
+  margin-right: 25px;
 }
 
 /* ☎️ BOTÓN TELÉFONO */
@@ -85,12 +94,13 @@
   cursor: pointer;
   color: white;
   display: none;
+  margin-right: 15px!important;
 }
 
 /* 📱 MENÚ MOBILE */
 .menuMobile {
   position: absolute;
-  top: 100px;
+  top: 83px;
   right: 0;
   width: 100%;
   background-color: #010101;
@@ -98,12 +108,12 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   z-index: 99;
   animation: slideDown 0.3s ease-in-out;
 }
 
-.menuMobile a {
+.menuMobile button {
   position: relative;
   color: white;
   text-decoration: none!important;
@@ -113,9 +123,11 @@
   width: 100%;
   text-align: center;
   padding: 0.5rem 0;
+  background-color: transparent;
+  border: none;
 }
 
-.menuMobile a::after {
+.menuMobile button::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -126,13 +138,26 @@
   transition: width 0.3s ease-in-out;
 }
 
-.menuMobile a:hover {
+.menuMobile button:hover {
   color: #FACC15;
 }
 
-.menuMobile a:hover::after {
+.menuMobile button:hover::after {
   width: 100%;
 }
+
+
+
+.scrollProgress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #FACC15; /* amarillo */
+  transition: width 0.1s ease-out;
+}
+
 
 /* 🎞️ ANIMACIÓN ENTRADA */
 @keyframes slideDown {

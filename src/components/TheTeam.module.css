@@ -2,7 +2,8 @@
   padding: 60px 20px;
   text-align: center;
   color: white;
-  background: radial-gradient(circle at center, #161616 0%, #0a0a0a 100%);
+  background-color: #010101;
+  
 }
 
 .teamContent {
@@ -109,5 +110,12 @@ font-weight: 500;
     height: 300px; /* o ajustá según lo que te guste */
     object-fit: cover;
    object-position: 50% 20%;
+  }
+
+  .teamTitle{
+    font-size: 2.2rem;
+  }
+  .theTeamSection{
+    background-color: #010101!important;
   }
 }

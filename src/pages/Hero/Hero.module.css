@@ -7,6 +7,7 @@ height: calc(100vh - 120px); /* si navbar ocupa 70px de alto */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 65px; /* igual al alto de tu navbar */
 }
 
 .hero::after {

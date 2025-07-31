@@ -46,23 +46,6 @@ a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .infoPanel {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .item {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 2rem;
-  }
-
-  .item:last-child {
-    border-bottom: none;
-  }
-}
 
 
 @media (max-width: 768px) {
@@ -79,9 +62,11 @@ a:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
-    height: auto; /* quita la altura fija */
-    width: 100%; /* ocupa todo el ancho disponible */
-    max-width: 400px; /* opcional para limitar el ancho */
+    height: auto; 
+    
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .item:last-child {

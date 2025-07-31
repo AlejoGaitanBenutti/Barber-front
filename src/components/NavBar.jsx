@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React from 'react';
 import styles from './NavBar.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HiOutlineX, HiOutlineMenu } from 'react-icons/hi';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -12,6 +12,23 @@ function Navbar() {
   const location = useLocation();
 
 
+   useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      const bar = document.querySelector(`.${styles.scrollProgress}`);
+      if (bar) {
+        bar.style.width = `${scrollPercent}%`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  
     const handleAnchorClick = (anchor) => {
     if (location.pathname !== '/') {
       // Cambia de ruta y pasa el anchor como estado
@@ -55,7 +72,7 @@ function Navbar() {
           {isMenuOpen ? <HiOutlineX size={28} />  : <HiOutlineMenu size={28}/>}
       </button>
 
-     
+     <div className={styles.scrollProgress}></div>
       
     </nav>
   );
