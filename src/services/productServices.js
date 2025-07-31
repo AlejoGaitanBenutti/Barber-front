@@ -1,5 +1,4 @@
-const apiUrl = "http://localhost/barber-backend/api/listar.php";
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export const getAllProductos =  async () =>{
     try{
