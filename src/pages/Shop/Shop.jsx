@@ -10,7 +10,7 @@ function Shop(){
     const [productos, setProductos] = useState([]);
 
     useEffect(()=>{
-console.log("API URL usada en frontend:", import.meta.env.VITE_API_URL);
+
         const fetchProductos = async () =>{
             const data = await getAllProductos();
 

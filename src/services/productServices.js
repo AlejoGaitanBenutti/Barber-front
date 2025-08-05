@@ -13,7 +13,7 @@ export const getAllProductos =  async () =>{
     });
 
     const text = await response.text();
-    console.log("Respuesta sin procesar:", text)
+    
 
     const data= JSON.parse(text);
     return data
