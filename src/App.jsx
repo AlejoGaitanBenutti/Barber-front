@@ -8,6 +8,7 @@ import Shop from './pages/Shop/Shop';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Contact from './pages/Contact/Contact';
+import ScrollToTop from '../ScrollToTop';
 
 function ScrollAndAnimate() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function ScrollAndAnimate() {
 function App() {
   return (
     <Router>
+       <ScrollToTop />
       <ScrollAndAnimate /> {/* 👈 Hook para animación y scroll */}
       <Navbar />
       <Routes>
