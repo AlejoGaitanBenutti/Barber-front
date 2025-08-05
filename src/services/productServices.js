@@ -7,11 +7,15 @@ export const getAllProductos =  async () =>{
         headers:{
             "Content-Type": "application/json",
         },
+         mode: "cors",
     
     });
 
-    const data = await response.json();
-    return data;
+    const text = await response.text();
+    console.log("Respuesta sin procesar:", text)
+
+    const data= JSON.parse(text);
+    return data
 
 
     }catch(e){
