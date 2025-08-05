@@ -33,3 +33,28 @@
   max-width: 1400px;
   width: 100%;
 }
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Altura para que el spinner se centre verticalmente */
+}
+
+.spinner {
+  border: 6px solid #f3f3f3; /* color gris claro */
+  border-top: 6px solid #facc15; /* amarillo, reemplaza por tu color principal */
+  border-right: 6px solid #eab308; /* otro tono amarillo */
+  border-bottom: 6px solid #f59e0b; /* otro tono para gradiente */
+  border-left: 6px solid #b45309; /* marrón oscuro para gradiente */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animación de giro */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
