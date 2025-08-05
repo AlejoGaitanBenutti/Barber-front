@@ -8,6 +8,7 @@ export const getAllProductos =  async () =>{
             "Content-Type": "application/json",
         },
          mode: "cors",
+         credentials:"include"
     
     });
 
